@@ -161,17 +161,20 @@ p:nth-child(4) {
 
 .card-container .user-list {
     display: grid;
-    grid-auto-flow: column;
-    justify-content: center;
-    gap: 1rem;
+    place-content: center;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr ));
+    gap: 15px;
+    padding: 30px;
     
 }
 .btcard{
-   align-self: center;
-    font-weight: bold;
-    background-color: #bb9696;
-    height: 3em;
-    width: 7em;
+    display: grid;
+    place-content: center;
+    grid-template-rows:repeat(auto-fit,minmax(auto,auto));
+    align-self: center;
+    gap: 10px;
+    height: 15px;
+    padding: 10px;
 }
 .btcard.btn-remove{
     background-color: rgb(151, 4, 4);
