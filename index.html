@@ -11,45 +11,54 @@
 <body onload="onInit()">
     <Header>
 
-        <form class="searchForm" onsubmit="return onSetFilterBy(event, {name: this.searchInput.value})">
-            <label class="search" for="searchInput">Search: <input type="search" id="searchInput" name="q"></label>
-            <button type="submit">Search</button>
+        <form onsubmit="return onSetFilterBy(event, {name: this.searchInput.value})">
+            <label  class="search" for="searchInput"><span data-trans="filter-search">Search:</span> <input class="searchForm" type="search" id="searchInput"
+                    name="q"></label>
+            <button data-trans="searc-button" type="submit">Search</button>
         </form>
         <label>
-            Rate:
+            <span data-trans="filter-rate">
+                Rate:
+            </span>
             <input type="number" min="0" max="5" value="0" class="rate"
                 onchange="this.title=this.value;onSetFilterBy( event,{rate: +this.value})" />
         </label>
-        <label>
-            price:
+        <label >
+            <span data-trans="filter-price">price:</span>
             <input type="range" min="0" max="250" value="0" class="price"
                 onchange="this.title=this.value;onSetFilterBy(event,{price: +this.value})" />
         </label>
+        <label>
+            <span data-trans="desc">Descending</span> 
+             <input  class="sort-desc" type="checkbox" oninput="onSetSortBy()" />
+         </label>
         <div>
-            Sort by:
+           <span data-trans="sort-by">Sort by:</span> 
             <select class="sort-by" onchange="onSetSortBy()">
-                <option value="">Select Sorting</option>
-                <option value="name">By name</option>
-                <option value="price">Price</option>
-                <option value="rate">Rate</option>
+                <option data-trans="select-sorting" value="">Select Sorting</option>
+                <option data-trans="name-sort" value="name">Name</option>
+                <option data-trans="price-sort" value="price">Price</option>
+                <option data-trans="rate-sort" value="rate">Rate</option>
             </select>
-            <label>
-                Descending
-                <input class="sort-desc" type="checkbox" oninput="onSetSortBy()" />
-            </label>
+            
         </div>
-        <button class="add" onclick="onAddBook()">ADD BOOK</button>
+        
+        <button data-trans="add-button" class="add" onclick="onAddBook()">ADD BOOK</button>
+        <select onchange="onSetLang(this.value)">
+            <option value="en">English</option>
+            <option value="he">עברית</option>
+        </select>
     </Header>
     <section>
         <table>
             <thead class="head">
-                <th>ID</th>
-                <th>NAME</th>
-                <th>PRICE</th>
-                <th>RATE</th>
-                <th>UPDATE</th>
-                <th>DETAILED</th>
-                <th>DELATE</th>
+                <th data-trans="th-id">ID</th>
+                <th data-trans="th-name">NAME</th>
+                <th data-trans="th-price">PRICE</th>
+                <th data-trans="th-rate">RATE</th>
+                <th data-trans="th-update">UPDATE</th>
+                <th data-trans="th-read">READ</th>
+                <th data-trans="th-delate">DELATE</th>
             <tbody class="table-body">
 
             </tbody>
@@ -61,16 +70,16 @@
         <ul class="user-list"></ul>
     </section>
     <div class="buttons">
-        
-        <button class="prev" title="Previous page" onclick="onChangePage(-1)">PREVIEW PAGE
-            </button>
+
+        <button data-trans="btn-prev" class="prev" title="Previous page" onclick="onChangePage(-1)">PREVIEW PAGE
         </button>
-        <button class="grid" title="grid" onclick="onGrid()">CARDS</button>
-        <button class="table" title="table" onclick="onTable()">TABLE</button>
-        <button class="next" title="Next page" onclick="onChangePage(1)">NEXT PAGE
+        </button>
+        <button data-trans="btn-card" class="grid" title="grid" onclick="onGrid()">CARDS</button>
+        <button data-trans="btn-Table" class="table" title="table" onclick="onTable()">TABLE</button>
+        <button data-trans="btn-next" class="next" title="Next page" onclick="onChangePage(1)">NEXT PAGE
     </div>
 
-    <div class="modal">
+    <div class="modal" onswipe="onSwipe()">
         <h3></h3>
         <h4>PRICE <span></span> </h4>
         <h5>Book Description</h5>
@@ -86,6 +95,8 @@
     </footer>
     <div class="user-msg"></div>
     <script src="js/services/util.service.js"></script>
+    <script src="lib/hammer.js"></script>
+    <script src="js/services/i18n.service.js"></script>
     <script src="js/services/book.service.js"></script>
     <script src="js/book.controler.js"></script>
 </body>

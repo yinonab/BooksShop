@@ -16,6 +16,7 @@ var gNames = [
     'The Five',
     'Fool Me Once',
 ]
+var gBookIdx
 var gBooks
 const PAGE_SIZE = 3
 var gPageIdx = 0
@@ -62,7 +63,14 @@ function addBook(name,price) {   //create
 }
 function getBookById(bookId) {            // Read   
     const book = gBooks.find(book => bookId === book.id)
+    console.log('book:', book)
     return book
+}
+function getBookByIdx(bookidx) {     
+           // Read   
+    const book = gBooks[bookidx]
+    console.log('book:', book.id)
+    return book.id
 }
 function getBookCountByPriceMap() {
     const BookCountByPriceMap = gBooks.reduce((map, book) => {
@@ -85,6 +93,19 @@ function removeBook(bookId) {  ///delate
     const bookIdx = gBooks.findIndex(book => bookId === book.id)
     gBooks.splice(bookIdx, 1)
     _saveBookToStorage()
+}
+function findBookIdx(bookId) {
+    const bookIdx = gBooks.findIndex(book => bookId === book.id)
+    gBookIdx=bookIdx
+    return bookIdx
+}
+function getNextBook(bookIdx){
+    var next =bookIdx+1
+    return next
+}
+function getPrevBook(bookIdx){
+    var prev =bookIdx-1
+    return prev
 }
 
 function setBookFilter(FilterBy = {}) {
