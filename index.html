@@ -10,7 +10,7 @@
 
 <body onload="onInit()">
     <Header class="header">
-
+        
         <form onsubmit="return onSetFilterBy(event, {name: this.searchInput.value})">
             <label  class="search" for="searchInput"><span data-trans="filter-search">Search:</span> <input class="searchForm" type="search" id="searchInput"
                     name="q"></label>
@@ -49,6 +49,13 @@
             <option value="he">עברית</option>
         </select>
     </Header>
+    <div class="modal hidden" onswipe="onSwipe()">
+        <h3></h3>
+        <h4>PRICE <span></span> </h4>
+        <h5>Book Description</h5>
+        <p></p>
+        <button onclick="onCloseModal()">Close</button>
+    </div>
     <section>
         <table>
             <thead class="head">
@@ -56,9 +63,6 @@
                 <th data-trans="th-name">NAME</th>
                 <th data-trans="th-price">PRICE</th>
                 <th data-trans="th-rate">RATE</th>
-                <th data-trans="th-update">UPDATE</th>
-                <th data-trans="th-read">READ</th>
-                <th data-trans="th-delate">DELATE</th>
             <tbody class="table-body">
 
             </tbody>
@@ -79,13 +83,7 @@
         <button data-trans="btn-next" class="next" title="Next page" onclick="onChangePage(1)">NEXT PAGE
     </div>
 
-    <div class="modal" onswipe="onSwipe()">
-        <h3></h3>
-        <h4>PRICE <span></span> </h4>
-        <h5>Book Description</h5>
-        <p></p>
-        <button onclick="onCloseModal()">Close</button>
-    </div>
+    
 
     <footer>
         <table class="footer">

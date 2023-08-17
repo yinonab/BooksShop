@@ -57,13 +57,10 @@ function renderBooks() {
     var strHtml = books.map(book =>
         `
           <tr>
-            <td>${book.id}</td>
+            <td>${book.id}<br><button data-trans="btn-update" onclick="onUpdateBook('${book.id}')">Update</button><button data-trans="btn-read" onclick="onReadBook('${book.id}')">Read</button><button data-trans="btn-remove" title="Delete Book" class="btn-remove" onclick="onRemoveBook('${book.id}')">X</button></td>
             <td>${book.name}</td>
             <td>${book.Price}</td>
             <td>${book.rate}</td>
-            <td> <button data-trans="btn-update" onclick="onUpdateBook('${book.id}')">Update</button></td>
-            <td><button data-trans="btn-read" onclick="onReadBook('${book.id}')">Read</button></td>
-            <td><button data-trans="btn-remove" title="Delete Book" class="btn-remove" onclick="onRemoveBook('${book.id}')">X</button></td>
           </tr>   
     `).join('')
     setElHtml('table-body', strHtml)
@@ -98,7 +95,7 @@ function onReadBook(bookId) {
     elModal.querySelector('h3').innerText = book.name
     elModal.querySelector('h4 span').innerText = book.Price
     elModal.querySelector('p').innerText = book.desc
-    elModal.classList.add('open')
+    elModal.classList.remove('hidden')
     // onSwipe()
 }
 function onUpdateBook(bookId) {
@@ -188,7 +185,7 @@ function flashMsg(msg) {
 
 function onCloseModal() {
     const elModal = document.querySelector('.modal')
-    elModal.classList.remove('open')
+    elModal.classList.add('hidden')
 }
 function onSetLang(lang) {
     setLang(lang)
