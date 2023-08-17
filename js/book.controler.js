@@ -164,7 +164,7 @@ function onSetSortBy() {
     if (!prop) return
 
     const sortBy = {}
-    sortBy[prop] = (isDesc) ? -1 : 1 // { maxSpeed: 1 }
+    sortBy[prop] = (isDesc) ? 1 : -1 // { maxSpeed: 1 }
 
     console.log('sortBy', sortBy)
 
