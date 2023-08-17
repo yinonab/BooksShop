@@ -47,19 +47,35 @@ const gTrans = {
     },
     'th-id':{
         en:'Id',
-        he:`מס' יחודי`
+        he: 'מס ייחודי'
+    },
+    'th-id-card':{
+        en:'Id',
+        he: 'מס ייחודי :'
     },
     'th-name':{
         en:'Name',
         he:'שם'
     },
+    'th-name-card':{
+        en:'Name',
+        he:'שם :'
+    },
     'th-price':{
         en:'price',
-        he:'מחיר'
+        he:': מחיר'
+    },
+    'th-price-card':{
+        en:'price',
+        he:'מחיר:'
     },
     'th-rate':{
         en:'Rate',
         he:'דירוג'
+    },
+    'th-rate-card':{
+        en:'Rate',
+        he:'דירוג :'
     },
     'th-update':{
         en:'Update',

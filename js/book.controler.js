@@ -41,10 +41,10 @@ function renderBooks() {
     var books = getBooks()
     var strCardHtml = books.map(book => `
     <div class="user-card">
-        <p><strong>ID:</strong> ${book.id}</p>
-        <p><strong>NAME:</strong> ${book.name}</p>
-        <p><strong>PRICE:</strong> ${book.Price}</p>
-        <p><strong>RATE:</strong> ${book.rate}</p>
+        <p><strong data-trans="th-id-card">ID:</strong> ${book.id}</p>
+        <p><strong data-trans="th-name-card">NAME:</strong> ${book.name}</p>
+        <p><strong data-trans="th-price-card">PRICE:</strong> ${book.Price}</p>
+        <p><strong data-trans="th-rate-card">RATE:</strong> ${book.rate}</p>
         
         <button class="btcard" onclick="onUpdateBook('${book.id}')" data-trans="btn-update">Update</button>
         <button data-trans="btn-remove" title="Delete Book" class="btn-remove btcard " onclick="onRemoveBook('${book.id}')">X</button>
