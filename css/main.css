@@ -1,5 +1,11 @@
 
-
+.header{
+    display: grid;
+    place-content: center;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr ));
+    gap: 15px;
+    padding: 30px;
+}
 table {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
