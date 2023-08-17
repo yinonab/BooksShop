@@ -191,7 +191,7 @@ p:nth-child(4) {
 }
 
 .footer {
-    margin-top: 200px;
+    margin-top: 40px;
     position: sticky;
     bottom: 15px;
     left: 0;
