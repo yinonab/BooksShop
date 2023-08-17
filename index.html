@@ -13,8 +13,8 @@
         
         <form onsubmit="return onSetFilterBy(event, {name: this.searchInput.value})">
             <label  class="search" for="searchInput"><span data-trans="filter-search">Search:</span> <input class="searchForm" type="search" id="searchInput"
-                    name="q"></label>
-            <button data-trans="searc-button" type="submit">Search</button>
+                    name="q"><button data-trans="searc-button" type="submit">Search</button></label>
+            
         </form>
         <label>
             <span data-trans="filter-rate">
@@ -43,11 +43,11 @@
             
         </div>
         
-        <button data-trans="add-button" class="add" onclick="onAddBook()">ADD BOOK</button>
-        <select onchange="onSetLang(this.value)">
+        <select class="lang" onchange="onSetLang(this.value)">
             <option value="en">English</option>
             <option value="he">עברית</option>
         </select>
+        <button data-trans="add-button" class="add" onclick="onAddBook()">ADD BOOK</button>
     </Header>
     <div class="modal hidden" onswipe="onSwipe()">
         <h3></h3>
