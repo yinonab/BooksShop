@@ -47,7 +47,7 @@ const gTrans = {
     },
     'th-id':{
         en:'Id',
-        he: 'מס ייחודי'
+        he: 'מזהה'
     },
     'th-id-card':{
         en:'Id',
