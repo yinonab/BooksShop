@@ -10,6 +10,9 @@ function onInit() {
     onSwipe()
 
 }
+function toggleMenu() {
+    document.body.classList.toggle('menu-open')
+}
 
 function onSwipe() {
     const elMOdal = document.querySelector('.modal')

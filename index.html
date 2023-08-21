@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/mq.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body onload="onInit()">
     <Header class="header">
-        
+        <nav class="main-nav">
         <form onsubmit="return onSetFilterBy(event, {name: this.searchInput.value})">
             <label  class="search" for="searchInput"><span data-trans="filter-search">Search:</span> <input class="searchForm" type="search" id="searchInput"
                     name="q"><button data-trans="searc-button" type="submit">Search</button></label>
@@ -48,6 +49,8 @@
             <option value="he">עברית</option>
         </select>
         <button data-trans="add-button" class="add" onclick="onAddBook()">ADD BOOK</button>
+    </nav>
+    <button class="btn-toggle-menu" onclick="toggleMenu()">☰</button>
     </Header>
     <div class="modal hidden" onswipe="onSwipe()">
         <h3></h3>
