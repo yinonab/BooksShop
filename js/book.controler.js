@@ -148,6 +148,7 @@ function onSetFilterBy(ev, filterBy) {
     ev.preventDefault()
     filterBy = setBookFilter(filterBy)
     renderBooks()
+    toggleMenu()
     var elInput = document.getElementById('searchInput')
     console.log('elInput:', elInput)
     elInput.value = ''
@@ -155,6 +156,7 @@ function onSetFilterBy(ev, filterBy) {
     const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + queryParams
 
     window.history.pushState({ path: newUrl }, '', newUrl)
+
 
 }
 function onSetSortBy() {
@@ -175,6 +177,7 @@ function onSetSortBy() {
 
     setBookSort(sortBy)
     renderBooks()
+    toggleMenu()
 
 }
 
@@ -184,6 +187,7 @@ function flashMsg(msg) {
     elMsg.innerText = msg
     elMsg.classList.add('open')
     setTimeout(() => elMsg.classList.remove('open'), 3000)
+
 }
 
 function onCloseModal() {
@@ -197,4 +201,6 @@ function onSetLang(lang) {
     else document.body.classList.remove('rtl')
     renderBooks()
     doTrans()
+    toggleMenu()
+
 }
