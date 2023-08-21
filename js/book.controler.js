@@ -87,6 +87,7 @@ function onAddBook(name, price) {
         const book = addBook(name, price)
         renderBooks()
         renderStatistic()
+        toggleMenu()
     }
 }
 function onReadBook(bookId) {
