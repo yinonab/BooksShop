@@ -33,7 +33,7 @@
             <span data-trans="desc">Descending</span> 
              <input  class="sort-desc" type="checkbox" oninput="onSetSortBy()" />
          </label>
-        <div>
+        <section>
            <span data-trans="sort-by">Sort by:</span> 
             <select class="sort-by" onchange="onSetSortBy()">
                 <option data-trans="select-sorting" value="">Select Sorting</option>
@@ -42,7 +42,7 @@
                 <option data-trans="rate-sort" value="rate">Rate</option>
             </select>
             
-        </div>
+        </section>
         
         <select class="lang" onchange="onSetLang(this.value)">
             <option value="en">English</option>
@@ -52,15 +52,15 @@
     </nav>
     <button class="btn-toggle-menu" onclick="toggleMenu()">☰</button>
     </Header>
-    <section class="modal hidden" onswipe="onSwipe()">
+    <div class="modal hidden" onswipe="onSwipe()">
         <h3></h3>
         <h4>PRICE <span></span> </h4>
         <img src="http://unsplash.it/460/340" alt="">
         <h5>Book Description</h5>
         <p></p>
         <button onclick="onCloseModal()">Close</button>
-    </section>
-    <section>
+    </div>
+    <div>
         <table>
             <thead class="head">
                 <th data-trans="th-id">ID</th>
@@ -72,7 +72,7 @@
             </tbody>
             </thead>
         </table>
-    </section>
+    </div>
 
     <section class="card-container hidden">
         <ul class="user-list"></ul>

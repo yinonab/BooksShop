@@ -36,7 +36,7 @@
 } */
 
 /* SMALL */
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .header {
         position: relative;
         /* padding: 20px 0;
@@ -71,7 +71,7 @@
     }
 
     label,
-    div {
+    section {
         border-bottom: 1px solid black;
         padding: 10px;
         white-space: nowrap;
