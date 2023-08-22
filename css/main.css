@@ -71,6 +71,10 @@ button {
     text-align: center;
     transition: left .20s;
 }
+img{
+    height: 5em;
+    width: 8em;
+}
 
 .modal.open {
     opacity: 1;
