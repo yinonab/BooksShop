@@ -53,7 +53,7 @@
         top: 32.3px;
 
         left: 0;
-        width: 87.5%;
+        width: 85.5%;
         display: none;
         margin-inline-start: 10px;
         margin-right: 20px;
@@ -73,7 +73,7 @@
     label,
     div {
         border-bottom: 1px solid black;
-        padding: 20px;
+        padding: 10px;
     }
 
 
