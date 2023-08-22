@@ -43,10 +43,14 @@
         min-height: 40px; */
     }
 
+    .btn-toggle-menu {
+        height: fit-content;
+    }
+
     .header .main-nav {
         border: 2px solid black;
         position: fixed;
-        top: 45px;
+        top: 32.3px;
 
         left: 0;
         width: 87.5%;

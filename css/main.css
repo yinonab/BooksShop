@@ -53,12 +53,12 @@ table th {
 
 button {
     gap: 10px;
-    padding: 5px;
+    padding: .1em;
     background-color: rgb(145, 191, 191);
     /* height: 2em; */
     width: 6em;
     /* width:clamp(6em,5em,8em) 5em; */
-    margin-top: 5px;
+    /* margin-top: .05em; */
     text-align: center;
 }
 
