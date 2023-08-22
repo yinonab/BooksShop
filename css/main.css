@@ -72,8 +72,8 @@ button {
     transition: left .20s;
 }
 img{
-    height: 5em;
-    width: 8em;
+    height: 3em;
+    width: 5em;
 }
 
 .modal.open {
